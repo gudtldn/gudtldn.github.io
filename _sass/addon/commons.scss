@@ -1614,7 +1614,7 @@ $sidebar-display: "sidebar-display";
   }
 
   #sidebar {
-    width: $sidebar-width-large;
+    width: $sidebar-width-large + 70px;
 
     .profile-wrapper {
       margin-top: 4rem;
