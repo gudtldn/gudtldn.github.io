@@ -21,7 +21,7 @@ timezone: Asia/Seoul
 
 title: 평범한휴먼의 개발일지                          # the main title
 
-tagline:          # it will display as the sub-title
+tagline: 여러가지 개발과 공부내용을<br>정리해 올리는 블로그 입니다.         # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   여러가지 개발과 공부내용을 정리해 올리는 블로그 입니다.
