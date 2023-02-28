@@ -21,10 +21,10 @@ timezone: Asia/Seoul
 
 title: 평범한휴먼의 개발일지                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline:          # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  여러가지 개발과 공부내용을 정리해 올리는 블로그 입니다.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://gudtldn.github.io'
@@ -49,6 +49,7 @@ social:
     # - https://www.linkedin.com/in/username
 
 google_site_verification: iiEekPDV4l_ixxXASS_8XswyL_Vavb1mQ1kfSdTefXE              # fill in to your verification string
+#naver_site_verification: _includes/head.html에 적음
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
