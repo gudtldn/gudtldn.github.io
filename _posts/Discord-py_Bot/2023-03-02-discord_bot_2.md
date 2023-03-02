@@ -27,7 +27,7 @@ date: 2023-03-02
 
 ![윈도우 검색창에 cmd 그림과 명령어 입력한 그림](/assets/img/Discord-py_Bot/2023-03-02-discord-py_bot_2/1.1.png)
 
-> 만약 pip 명령어가 없다고 뜨면 [이 포스팅](){:target="_blank"} 을 참조해 주세요.
+> 만약 pip 명령어가 없다고 뜨면 [이 포스팅](https://gudtldn.github.io/posts/python_pip_install/){:target="_blank"} 을 참조해 주세요.
 
 설치가 완료되면 명령 프롬프트창을 닫으셔도 됩니다.
 
