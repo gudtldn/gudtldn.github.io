@@ -23,14 +23,14 @@ last_modified_at: 2023-03-02
 
 로그인을 하면 밑과 같은 화면이 뜰 텐데요.
 
-![Applications 화면](/assets/img/Discord-py_Bot/2023-03-01-discord-py_bot_1/1.1.png){:style=""}
+![Applications 화면](/assets/img/Discord-py_Bot/2023-03-02-discord-py_bot_1/1.1.png){:style=""}
 
 여기서 우측 상단에 있는 New Application 버튼을 누르면 새 팝업 화면이 뜨는데, **NAME**칸에 원하는 이름으로 지어주세요.
 
 > 참고
 >- 이쪽의 **NAME**칸은 봇의 이름이 아닌 애플리케이션의 이름입니다.<br>따라서 다른 봇들과 구분정도만 할 수 있도록 적어주세요. (봇 이름과 같아도 됩니다.)
 
-![New Application 버튼](/assets/img/Discord-py_Bot/2023-03-01-discord-py_bot_1/1.2.png)
+![New Application 버튼](/assets/img/Discord-py_Bot/2023-03-02-discord-py_bot_1/1.2.png)
 
 Create 버튼을 눌러 애플리케이션을 만듭니다.
 
@@ -40,24 +40,24 @@ Create 버튼을 눌러 애플리케이션을 만듭니다.
 
 애플리케이션까지 다 만들었다면 밑과 같은 화면이 반겨줄 겁니다.
 
-![Applications 정보 화면](/assets/img/Discord-py_Bot/2023-03-01-discord-py_bot_1/2.1.png)
+![Applications 정보 화면](/assets/img/Discord-py_Bot/2023-03-02-discord-py_bot_1/2.1.png)
 
 여기서 좌측 **SETTING** 메뉴의 밑에 있는 **Bot** 카테고리를 클릭하고
 
-![Applications 봇 추가 화면](/assets/img/Discord-py_Bot/2023-03-01-discord-py_bot_1/2.2.png)
+![Applications 봇 추가 화면](/assets/img/Discord-py_Bot/2023-03-02-discord-py_bot_1/2.2.png)
 
 우측의 **Add bot** 버튼을 클릭합니다.
 클릭 후 `ADD A BOT TO THIS APP?` 이라는 팝업이 뜨는데, `Yes, do it!` 버튼을 누르면 봇이 만들어집니다. (만약 2차 인증이 있다면 2차 인증 후)
 
 여기까지 따라오셨다면 밑과 같은 화면이 반겨줍니다.
 
-![Applications 봇 정보 화면](/assets/img/Discord-py_Bot/2023-03-01-discord-py_bot_1/2.3.png)
+![Applications 봇 정보 화면](/assets/img/Discord-py_Bot/2023-03-02-discord-py_bot_1/2.3.png)
 
 <br>
 
 ## 2.1 봇 상세설정
 
-![봇 설정 이미지](/assets/img/Discord-py_Bot/2023-03-01-discord-py_bot_1/2.1.1.png)
+![봇 설정 이미지](/assets/img/Discord-py_Bot/2023-03-02-discord-py_bot_1/2.1.1.png)
 
 #### 봇 정보 설정
 
@@ -112,13 +112,13 @@ Create 버튼을 눌러 애플리케이션을 만듭니다.
 
 <br>
 
-![변경 후 Applications 봇 정보 화면](/assets/img/Discord-py_Bot/2023-03-01-discord-py_bot_1/3.1.png)
+![변경 후 Applications 봇 정보 화면](/assets/img/Discord-py_Bot/2023-03-02-discord-py_bot_1/3.1.png)
 
 여기서 다시 좌측 **SETTING** 메뉴의 밑에 있는 **OAuth2** 카테고리를 클릭하고, **URL Generator** 를 클릭합니다.
 
 그러면 밑과 같은 화면이 뜨는데요.
 
-![OAuth2 화면](/assets/img/Discord-py_Bot/2023-03-01-discord-py_bot_1/3.2.png)
+![OAuth2 화면](/assets/img/Discord-py_Bot/2023-03-02-discord-py_bot_1/3.2.png)
 
 여기서 봇의 기능을 위한 `bot` 과 추후 설명 할 슬래시(빗금) 명령어를 사용하기 위해 `applications.commands` 를 선택합니다.
 
@@ -128,11 +128,11 @@ Create 버튼을 눌러 애플리케이션을 만듭니다.
 
 이렇게 하고 페이지 맨 밑으로 가 보면 밑과 같은 링크가 있습니다.
 
-![OAuth2 링크](/assets/img/Discord-py_Bot/2023-03-01-discord-py_bot_1/3.3.png)
+![OAuth2 링크](/assets/img/Discord-py_Bot/2023-03-02-discord-py_bot_1/3.3.png)
 
 이 링크를 복사해 새 탭의 주소창에 입력 해 주세요.
 
-![봇 초대 화면1](/assets/img/Discord-py_Bot/2023-03-01-discord-py_bot_1/3.4.png)
+![봇 초대 화면1](/assets/img/Discord-py_Bot/2023-03-02-discord-py_bot_1/3.4.png)
 
 여기서 봇을 초대하고자 하는 서버를 선택한 후 **계속하기** 버튼을 클릭, **승인** 버튼도 클릭한 뒤 캡차인증을 하면, 드디어 봇 추가가 완료됩니다.
 
