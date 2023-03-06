@@ -2,7 +2,7 @@
 title: "디스코드 봇 만들기 #1 - 봇 생성하기"
 
 categories:
-  - Discord-py_Bot
+  - Discord-py2.0_Bot
 tags:
   - [python, discord-py, discord bot]
 
