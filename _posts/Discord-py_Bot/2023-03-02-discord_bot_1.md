@@ -10,7 +10,7 @@ toc: true
 toc_sticky: true
  
 date: 2023-03-02
-last_modified_at: 2023-03-02
+last_modified_at: 2023-03-09
 ---
 
 > 시작하기 전
@@ -143,8 +143,10 @@ Create 버튼을 눌러 애플리케이션을 만듭니다.
 제 부족한 글을 읽으며, 여기까지 오느라 수고 많으셨습니다.
 다음 편은 `pip`으로 `discord.py` 모듈 설치와 간단하게 봇을 온라인으로 만들어 보겠습니다.
 
-[디스코드 봇 만들기 #2 - 봇 온라인으로 만들어보기](https://gudtldn.github.io/posts/discord_bot_2/)
+다음 포스팅: [디스코드 봇 만들기 #2 - 봇 온라인으로 만들어보기](https://gudtldn.github.io/posts/discord_bot_2/ "다음 포스팅으로 이동")
+
+<br>
 
 ---
 
-질문과 틀린곳, 보완했으면 하는것이 있으면 댓글로 알려주세요.
+> 질문과 틀린곳, 보완했으면 하는것이 있으면 댓글로 알려주세요.
