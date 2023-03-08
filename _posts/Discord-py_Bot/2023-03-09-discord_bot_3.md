@@ -222,7 +222,7 @@ async def exception_error(ctx: commands.Context, error):
 
 이상 제 포스팅을 봐 주셔서 감사합니다.
 
-소스코드: [소스코드로 이동하기](https://github.com/gudtldn/discord-bot_tutorial/tree/discord-bot_tutorial_3 "소스코드로 이동")
+소스코드: [소스코드로 이동하기](https://github.com/gudtldn/discord-bot_tutorial/tree/discord-bot_tutorial_3 "소스코드로 이동"){:target="_blank"}
 
 <br>
 
