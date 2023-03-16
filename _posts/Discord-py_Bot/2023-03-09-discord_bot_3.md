@@ -10,7 +10,7 @@ toc: true
 toc_sticky: true
 
 date: 2023-03-09
-# last_modified_at: 2023-03-09
+last_modified_at: 2023-03-16
 ---
 
 ## 1. 간단한 봇 답장기능 만들기
@@ -223,6 +223,8 @@ async def exception_error(ctx: commands.Context, error):
 이상 제 포스팅을 봐 주셔서 감사합니다.
 
 소스코드: [소스코드로 이동하기](https://github.com/gudtldn/discord-bot_tutorial/tree/discord-bot_tutorial_3 "소스코드로 이동"){:target="_blank"}
+
+다음 포스팅: [디스코드 봇 만들기 #3 - 봇 명령어 만들기](https://gudtldn.github.io/posts/discord_bot_4/ "다음 포스팅으로 이동")
 
 <br>
 
