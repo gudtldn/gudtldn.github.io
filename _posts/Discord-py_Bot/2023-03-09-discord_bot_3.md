@@ -224,7 +224,7 @@ async def exception_error(ctx: commands.Context, error):
 
 소스코드: [소스코드로 이동하기](https://github.com/gudtldn/discord-bot_tutorial/tree/discord-bot_tutorial_3 "소스코드로 이동"){:target="_blank"}
 
-다음 포스팅: [디스코드 봇 만들기 #3 - 봇 명령어 만들기](https://gudtldn.github.io/posts/discord_bot_4/ "다음 포스팅으로 이동")
+다음 포스팅: [디스코드 봇 만들기 #4 - 빗금(슬래시) 명령어 만들기](https://gudtldn.github.io/posts/discord_bot_4/ "다음 포스팅으로 이동")
 
 <br>
 
