@@ -10,7 +10,7 @@ toc: true
 toc_sticky: true
 
 date: 2023-03-16
-# last_modified_at: 2023-03-16
+last_modified_at: 2024-04-14
 ---
 
 ## 1. 빗금 명령어 준비하기
@@ -42,7 +42,7 @@ GUILDS = [discord.Object(id) for id in (복사한 서버 ID,)]
 
 <br>
 
-그리고 [디스코드 봇 만들기 #2](https://gudtldn.github.io/posts/discord_bot_2/) 에서 작성했던 **Bot** 클래스에 아래와 같은 코드를 추가해 주세요.
+그리고 [디스코드 봇 만들기 #2](https://gudtldn.github.io/posts/discord_bot_2/#3-봇-온라인으로-만들기){:target="_blank"} 에서 작성했던 **Bot** 클래스에 아래와 같은 코드를 추가해 주세요.
 
 ```py
 async def setup_hook(self):
