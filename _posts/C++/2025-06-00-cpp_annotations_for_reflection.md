@@ -32,3 +32,7 @@ struct [[=expr]] MyStruct {
     [[=expr]] int member;
 };
 ```
+
+## 참고 문서
+
+- [Annotations for Reflection (P3394)](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p3394r3.html){:target="_blank"}

@@ -72,3 +72,7 @@ int main() {
 ```
 
 위 코드에서처럼 리플렉션 정보를 다시 타입으로 사용하기 위해 `typename[:int_refl:]` 형태로 쓸 수 있습니다. 이때 `typename` 키워드는 스플라이서가 변환할 결과물이 타입이라는 것을 컴파일러에게 명시적으로 알려주는 역할을 합니다.
+
+## 참고 문서
+
+- [Reflection for C++26 (P3394)](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p2996r12.html){:target="_blank"}
