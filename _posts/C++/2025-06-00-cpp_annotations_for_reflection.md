@@ -25,9 +25,14 @@ last_modified_at: 2025-06-20
 
 어노테이션은 다음과 같은 문법으로 사용할 수 있습니다.
 
-```c++
-[[=expr]] // expr은 컴파일 타임에 평가되는 표현식
-```
+| 문법                      | 설명                              | 사용 예시                                  |
+| ------------------------- | --------------------------------- | ------------------------------------------ |
+| `[[=value]]`              | 기본 값 어노테이션                | `int [[=42]] x;`                           |
+| `[[=some_object]]`        | 객체 어노테이션                   | `struct [[=Debug{}]] Point { int x, y; };` |
+| `[[=function_call()]]`    | 함수 호출 결과 어노테이션         | `void [[=get_priority()]] func();`         |
+| `[[=complex_expression]]` | 복잡한 표현식 어노테이션          | `auto [[=sizeof(T) > 8]] large_data;`      |
+| `[[=first, =second]]`     | 다중 어노테이션                   | `bool [[=serialize, =validate]] flag;`     |
+| `[[=namespace::type{}]]`  | 네임스페이스 포함 타입 어노테이션 | `struct [[=serde::derive]] Person {};`     |
 
 아래는 다양한 코드 요소에 어노테이션을 적용하는 예시입니다.
 
