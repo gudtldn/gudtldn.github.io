@@ -86,7 +86,7 @@ int main() {
 
 여기서는 이후의 활용 예제에서 사용될 핵심적인 함수 몇 가지를 중심으로 소개하겠습니다.
 
-> 아래 함수들은 [bloomberg/clang-p2996][bloomberg/clang-p2996]{:target="_blank"}에서 자세히 확인할 수 있습니다.
+> 아래 함수들은 [bloomberg/clang-p2996](https://github.com/bloomberg/clang-p2996/blob/p2996/libcxx/include/meta "meta 헤더로 이동하기"){:target="_blank"}에서 자세히 확인할 수 있습니다.
 
 ### 3.1. 리플렉션 정보 확인 함수 (Predicate Functions)
 
@@ -175,6 +175,8 @@ consteval auto select_by_name(std::string_view name) {
             return field;
         }
     }
+
+    return std::meta::info{}; // 일치하는 멤버가 없으면 빈 info 객체 반환
 }
 
 int main() {
@@ -192,7 +194,57 @@ int main() {
 }
 ```
 
-### 4.n. 클래스 멤버 목록 조회
+### 4.2. 함수 시그니처 조회
+
+### 4.3. 열거형 멤버 목록 조회
+
+```c++
+#include <meta>
+#include <array>
+#include <string_view>
+#include <iostream>
+
+template <typename T>
+consteval auto get_enum_values()
+{
+    constexpr auto refl = ^^T;
+
+    if (!std::meta::is_enum_type(refl))
+    {
+        throw "Provided type is not an enum.";
+    }
+    
+    auto val = std::meta::enumerators_of(refl);
+    constexpr size_t size = std::meta::enumerators_of(refl).size();
+
+    std::array<std::string_view, size> values{};
+
+    for (size_t i = 0; i < val.size(); ++i)
+    {
+        values[i] = std::meta::identifier_of(val[i]);
+    }
+
+    return values;
+}
+
+enum class MyEnum {
+    Value1,
+    Value2,
+    Value3
+};
+
+int main() {
+    constexpr auto enum_values = get_enum_values<MyEnum>();
+
+    for (const auto& value : enum_values) {
+        std::cout << value << std::endl; // Value1, Value2, Value3
+    }
+
+    return 0;
+}
+```
+
+### 4.n. 클래스 정보 추출
 
 기존에는 매크로나 템플릿 메타프로그래밍을 통해 복잡하고, 유지보수가 어려운 코드를 작성해야 했지만, C++26에서는 리플렉션을 통해 간단하게 클래스의 멤버 목록을 조회할 수 있습니다.
 
