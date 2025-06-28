@@ -153,7 +153,8 @@ struct MyStruct {
 
 // 인덱스로 멤버 선택
 template <typename T>
-consteval auto select_by_index(size_t index) {
+    requires std::is_class_v<T>
+consteval auto select_by_index(size_t index) -> std::meta::info {
     // 현재 코드위치에서 MyStruct의 접근할 수 있는 범위 컨텍스트를 가져옵니다.
     constexpr auto ctx = std::meta::access_context::current();
 
@@ -163,7 +164,8 @@ consteval auto select_by_index(size_t index) {
 
 // 이름으로 멤버 선택
 template <typename T>
-consteval auto select_by_name(std::string_view name) {
+    requires std::is_class_v<T>
+consteval auto select_by_name(std::string_view name) -> std::meta::info {
     using namespace std::meta;
 
     // 현재 코드위치에서 MyStruct의 접근할 수 있는 범위 컨텍스트를 가져옵니다.
@@ -176,7 +178,8 @@ consteval auto select_by_name(std::string_view name) {
         }
     }
 
-    return std::meta::info{}; // 일치하는 멤버가 없으면 빈 info 객체 반환
+    // 만약 일치하는 멤버가 없다면, 빈 info 객체를 반환합니다.
+    return std::meta::info{};
 }
 
 int main() {
@@ -194,37 +197,39 @@ int main() {
 }
 ```
 
-### 4.2. 함수 시그니처 조회
+### 4.2. 열거형 멤버 목록 조회
 
-### 4.3. 열거형 멤버 목록 조회
+C++26에서는 열거형 타입에 대한 리플렉션 기능도 제공됩니다. 이를 통해 열거형의 멤버 목록을 쉽게 조회할 수 있습니다.
 
 ```c++
 #include <meta>
 #include <array>
 #include <string_view>
+#include <type_traits>
 #include <iostream>
 
 template <typename T>
+    requires std::is_enum_v<T>
 consteval auto get_enum_values()
 {
+    // 임의의 타입 T에 대한 리플렉션 정보를 가져옵니다.
     constexpr auto refl = ^^T;
 
-    if (!std::meta::is_enum_type(refl))
+    // requires 대신 
+    static_assert(std::meta::is_enum_type(refl), "T must be an enum type");
+
+    // 열거형의 멤버 목록을 가져옵니다.
+    auto enum_values = std::meta::enumerators_of(refl);
+    constexpr size_t len = std::meta::enumerators_of(refl).size();
+
+    std::array<std::string_view, len> ret{};
+    for (size_t i = 0; i < len; ++i)
     {
-        throw "Provided type is not an enum.";
-    }
-    
-    auto val = std::meta::enumerators_of(refl);
-    constexpr size_t size = std::meta::enumerators_of(refl).size();
-
-    std::array<std::string_view, size> values{};
-
-    for (size_t i = 0; i < val.size(); ++i)
-    {
-        values[i] = std::meta::identifier_of(val[i]);
+        // 각 열거형 멤버의 식별자를 문자열로 변환하여 배열에 저장합니다.
+        ret[i] = std::meta::identifier_of(enum_values[i]);
     }
 
-    return values;
+    return ret;
 }
 
 enum class MyEnum {
