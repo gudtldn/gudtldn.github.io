@@ -215,7 +215,7 @@ consteval auto get_enum_values()
     // 임의의 타입 T에 대한 리플렉션 정보를 가져옵니다.
     constexpr auto refl = ^^T;
 
-    // requires 대신 
+    // requires 대신 static_assert를 사용할 경우
     static_assert(std::meta::is_enum_type(refl), "T must be an enum type");
 
     // 열거형의 멤버 목록을 가져옵니다.
@@ -258,10 +258,13 @@ int main() {
 
 class MyClass {
 public:
-  void test_function(int a, double b) {}
+    void test_function(int a, double b) {}
+
+protected:
+    int my_int;
 
 private:
-
+    double my_double;
 };
 ```
 
@@ -279,6 +282,89 @@ consteval auto get_custom_attributes_of_class()
     }
     
     return names;
+}
+```
+
+```c++
+#include <array>
+#include <string>
+#include <string_view>
+#include <experimental/meta>
+#include <iostream>
+
+enum class Type : uint8_t {
+    Unknown,
+    Int,
+    Float,
+    String,
+    Bool
+};
+
+struct MemberInfo {
+    Type type;
+    std::string_view member_name;
+};
+
+template <typename T>
+consteval auto get_members() {
+    // 임의의 타입 T에 대한 리플렉션 정보를 가져옵니다.
+    constexpr auto refl = ^^T;
+
+    // T의 멤버 리플렉션 정보를 가져옵니다.
+    constexpr auto ctx = std::meta::access_context::unchecked();
+    auto members = std::meta::nonstatic_data_members_of(refl, ctx);
+
+    // 멤버들을 순회하면서 각 멤버의 이름과 타입을 추출합니다.
+    constexpr size_t len = std::meta::nonstatic_data_members_of(refl, ctx).size();
+    std::array<MemberInfo, len> member_info{};
+
+    for (size_t i = 0; i < len; ++i) {
+        const auto member = members[i];
+        member_info[i].member_name = std::meta::identifier_of(member);
+        
+        // 멤버의 타입을 확인하고 Type 열거형에 매핑합니다.
+        auto member_type = std::meta::type_of(member);
+        if (std::meta::is_integral_type(member_type)) {
+            member_info[i].type = Type::Int;
+        } else if (std::meta::is_floating_point_type(member_type)) {
+            member_info[i].type = Type::Float;
+        } else if (^^std::string == member_type) {
+            member_info[i].type = Type::String;
+        } else if (^^bool == member_type) {
+            member_info[i].type = Type::Bool;
+        } else {
+            member_info[i].type = Type::Unknown;
+        }
+    }
+
+    return member_info;
+}
+
+consteval auto get_enum_identifier(const std::meta::info member) {
+    // 멤버의 식별자를 가져옵니다.
+    return std::meta::identifier_of(member);
+}
+
+struct MyData {
+    int x = 10;
+    double y = 20.5;
+    std::string label = "Center";
+};
+
+int main() {
+    constexpr auto members = get_members<MyData>();
+
+    for (const auto& member : members) {
+        std::cout << "Member Name: " << member.member_name << ", Type: ";
+        switch (member.type) {
+            case Type::Int: std::cout << "Int"; break;
+            case Type::Float: std::cout << "Float"; break;
+            case Type::String: std::cout << "String"; break;
+            case Type::Bool: std::cout << "Bool"; break;
+            default: std::cout << "Unknown"; break;
+        }
+        std::cout << '\n';
+    }
 }
 ```
 
