@@ -141,8 +141,11 @@ int main() {
 
 아래 예시코드는 구조체/클래스의 멤버를 이름 및 인덱스로 접근하는 방법입니다.
 
+> [Compiler Explorer에서 실행하기](https://godbolt.org/z/vano5PTjM)
+
 ```c++
 #include <meta>
+#include <print>
 #include <string_view>
 
 struct MyStruct {
@@ -193,6 +196,10 @@ int main() {
     // var.[:select_by_index<MyStruct>(3):] = 42;
     // var.[:select_by_name<MyStruct>("d"):] = 42; // 컴파일 에러
 
+    std::println("a: {}", var.a); // 10
+    std::println("b: {}", var.b); // 3.14
+    std::println("c: {}", var.c); // z
+
     return 0;
 }
 ```
@@ -200,6 +207,8 @@ int main() {
 ### 4.2. 열거형 멤버 목록 조회
 
 C++26에서는 열거형 타입에 대한 리플렉션 기능도 제공됩니다. 이를 통해 열거형의 멤버 목록을 쉽게 조회할 수 있습니다.
+
+> [Compiler Explorer에서 실행하기](https://godbolt.org/z/T51xcqfjj)
 
 ```c++
 #include <meta>
