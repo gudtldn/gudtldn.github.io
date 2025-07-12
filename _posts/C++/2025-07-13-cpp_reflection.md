@@ -141,7 +141,7 @@ int main() {
 
 아래 예시코드는 구조체/클래스의 멤버를 이름 및 인덱스로 접근하는 방법입니다.
 
-> [Compiler Explorer에서 실행하기](https://godbolt.org/z/vano5PTjM)
+> [Compiler Explorer에서 실행하기](https://godbolt.org/z/vano5PTjM){:target="_blank"}
 
 ```c++
 #include <meta>
@@ -208,7 +208,7 @@ int main() {
 
 C++26에서는 열거형 타입에 대한 리플렉션 기능도 제공됩니다. 이를 통해 열거형의 멤버 목록을 쉽게 조회할 수 있습니다.
 
-> [Compiler Explorer에서 실행하기](https://godbolt.org/z/T51xcqfjj)
+> [Compiler Explorer에서 실행하기](https://godbolt.org/z/T51xcqfjj){:target="_blank"}
 
 ```c++
 #include <meta>
