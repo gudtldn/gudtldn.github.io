@@ -9,8 +9,8 @@ tags:
 toc: true
 toc_sticky: true
 
-date: 2025-06-28
-last_modified_at: 2025-06-28
+date: 2025-07-13
+last_modified_at: 2025-07-13
 ---
 
 > 이 글은 [C++26 초안(P2996R12)][C++26 P2996R12 docs]{:target="_blank"}과 [bloomberg/clang-p2996][bloomberg/clang-p2996]{:target="_blank"} 리플렉션 구현을 기반으로 작성되었습니다.  
