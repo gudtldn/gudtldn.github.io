@@ -10,10 +10,10 @@ toc: true
 toc_sticky: true
 
 date: 2025-07-13
-last_modified_at: 2025-07-13
+last_modified_at: 2025-07-26
 ---
 
-> 이 글은 [C++26 초안(P2996R12)][C++26 P2996R12 docs]{:target="_blank"}과 [bloomberg/clang-p2996][bloomberg/clang-p2996]{:target="_blank"} 리플렉션 구현을 기반으로 작성되었습니다.  
+> 이 글은 [C++26 초안(P2996R13)][C++26 P2996R13 docs]{:target="_blank"}과 [bloomberg/clang-p2996][bloomberg/clang-p2996]{:target="_blank"} 리플렉션 구현을 기반으로 작성되었습니다.  
 > C++26 표준이 확정되기 전까지는 내용이 부정확하거나 변경될 수 있습니다.
 
 ## 1. 개요
@@ -383,8 +383,8 @@ int main() {
 
 ## 참고 문서
 
-- [Reflection for C++26 (P2996R12)][C++26 P2996R12 docs]{:target="_blank"}
+- [Reflection for C++26 (P2996R13)][C++26 P2996R13 docs]{:target="_blank"}
 - [bloomberg/clang-p2996 GitHub Repository][bloomberg/clang-p2996]{:target="_blank"}
 
-[C++26 P2996R12 docs]: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p2996r12.html
+[C++26 P2996R13 docs]: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p2996r13.html
 [bloomberg/clang-p2996]: https://github.com/bloomberg/clang-p2996
