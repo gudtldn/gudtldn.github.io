@@ -30,7 +30,7 @@ with open("./token.txt", "r") as fr:
 
 이렇게 하면 사용자가 `.안녕` 또는 `.반가워` 라고 보냈을 때 `send_hello` 함수가 호출이 되어, 봇이 `안녕하세요!` 를 보내게 됩니다.
 
-![봇 인사 동작 사진](/assets/img/Discord-py_Bot/2023-03-08-discord-py_bot_3/1.1.png)
+![봇 인사 동작 사진](/assets/images/Discord-py_Bot/2023-03-08-discord-py_bot_3/1.1.png)
 
 <br>
 
@@ -91,7 +91,7 @@ async def args_test(ctx: commands.Context, arg1: str, arg2: str, arg3: str):
     await ctx.send(f"첫번째 값: {arg1}\n두번째 값: {arg2}\n세번째 값: {arg3}")
 ```
 
-![인자 3개를 받아와 출력하는 사진](/assets/img/Discord-py_Bot/2023-03-08-discord-py_bot_3/2.1.png)
+![인자 3개를 받아와 출력하는 사진](/assets/images/Discord-py_Bot/2023-03-08-discord-py_bot_3/2.1.png)
 
 이와 같이 값이 3개가 받아지는걸 확인할 수 있습니다.
 
@@ -106,7 +106,7 @@ async def args_test(ctx: commands.Context, *args: str):
     await ctx.send(f"{', '.join(args)}\n총합 {len(args)}개")
 ```
 
-![인자 여러개를 받아와 출력하는 사진](/assets/img/Discord-py_Bot/2023-03-08-discord-py_bot_3/2.2.png)
+![인자 여러개를 받아와 출력하는 사진](/assets/images/Discord-py_Bot/2023-03-08-discord-py_bot_3/2.2.png)
 
 이와 같이 여러 개가 받아지는 걸 확인할 수 있습니다.
 
@@ -120,7 +120,7 @@ async def args_test(ctx: commands.Context, *, args: str):
     await ctx.send(f"입력된 내용: {args}")
 ```
 
-![하나의 텍스트로 받아오는 사진](/assets/img/Discord-py_Bot/2023-03-08-discord-py_bot_3/2.3.png)
+![하나의 텍스트로 받아오는 사진](/assets/images/Discord-py_Bot/2023-03-08-discord-py_bot_3/2.3.png)
 
 이와 같이 하나의 텍스트로 받아지는 걸 확인할 수 있습니다.
 
@@ -147,7 +147,7 @@ async def default_value(ctx: commands.Context, arg1: Optional[str] = None):
 ```
 > 밑 코드에서 `Optional` 이 들어가면 `None` 은 생략 가능합니다.
 
-![기본값 설정후 출력값 사진](/assets/img/Discord-py_Bot/2023-03-08-discord-py_bot_3/3.1.png)
+![기본값 설정후 출력값 사진](/assets/images/Discord-py_Bot/2023-03-08-discord-py_bot_3/3.1.png)
 
 이와 같이 기본값을 설정할 수 있습니다.
 
@@ -172,7 +172,7 @@ async def type_annotation(ctx: commands.Context, arg1: str, arg2: int, arg3: flo
     await ctx.send(f"arg1의 타입: {type(arg1)}\narg2의 타입: {type(arg2)}\narg3의 타입: {type(arg3)}")
 ```
 
-![타입 확인하는 사진](/assets/img/Discord-py_Bot/2023-03-08-discord-py_bot_3/4.1.png)
+![타입 확인하는 사진](/assets/images/Discord-py_Bot/2023-03-08-discord-py_bot_3/4.1.png)
 
 이와같이 따로 추가 변환없이 특정 타입의 값을 받아올 수 있습니다.
 
@@ -192,7 +192,7 @@ async def exception_error(ctx: commands.Context, error):
     await ctx.send(f"예외가 발생하였습니다.\n```{error}```")
 ```
 
-![예외처리 사진1](/assets/img/Discord-py_Bot/2023-03-08-discord-py_bot_3/5.1.png)
+![예외처리 사진1](/assets/images/Discord-py_Bot/2023-03-08-discord-py_bot_3/5.1.png)
 
 이와같이 명령어를 실행할 함수 이름에 데코레이터를 붙이고, 뒤에 `.error` 를 추가하면 위 명령어에서 발생한 예외를 처리할 수 있습니다.
 
@@ -211,7 +211,7 @@ async def exception_error(ctx: commands.Context, error):
         await ctx.send(f"예외가 발생하였습니다.\n```{error}```")
 ```
 
-![예외처리 사진2](/assets/img/Discord-py_Bot/2023-03-08-discord-py_bot_3/5.2.png)
+![예외처리 사진2](/assets/images/Discord-py_Bot/2023-03-08-discord-py_bot_3/5.2.png)
 
 <br>
 

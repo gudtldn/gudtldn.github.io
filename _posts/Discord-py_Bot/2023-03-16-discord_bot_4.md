@@ -25,11 +25,11 @@ from discord import app_commands
 
 먼저 디스코드에서 개발자 모드를 켜야 합니다. 아래와 같이 디스코드 사용자 설정으로 들어가 **고급** 버튼을 누르고 개발자 모드를 켜 주세요.
 
-![디코 사용자 설정 화면](/assets/img/Discord-py_Bot/2023-03-16-discord-py_bot_4/1.1.png)
+![디코 사용자 설정 화면](/assets/images/Discord-py_Bot/2023-03-16-discord-py_bot_4/1.1.png)
 
 그리고 빗금 명령어를 사용하고 싶은 서버를 마우스 오른쪽 클릭을 하고 `ID 복사하기` 버튼을 눌러주세요.
 
-![서버 id 복사하는 사진](/assets/img/Discord-py_Bot/2023-03-16-discord-py_bot_4/1.2.png)
+![서버 id 복사하는 사진](/assets/images/Discord-py_Bot/2023-03-16-discord-py_bot_4/1.2.png)
 
 다시 코드 에디터로 돌아와서 복사한 서버 아이디를 아래와 같이 코드 상단에다가 입력해 주세요.
 
@@ -94,8 +94,8 @@ async def app_send_hello(interaction: discord.Interaction):
 
 그리고 **discord_bot.py** 파일을 실행하고 서버에 가보면 아래 사진과 같은 모습을 볼 수 있습니다.
 
-![명령어 목록 사진](/assets/img/Discord-py_Bot/2023-03-16-discord-py_bot_4/2.1.png)
-![명령어 실행 결과 사진](/assets/img/Discord-py_Bot/2023-03-16-discord-py_bot_4/2.2.png)
+![명령어 목록 사진](/assets/images/Discord-py_Bot/2023-03-16-discord-py_bot_4/2.1.png)
+![명령어 실행 결과 사진](/assets/images/Discord-py_Bot/2023-03-16-discord-py_bot_4/2.2.png)
 
 
 ## 3. 명령어에 매개변수 추가하기
@@ -124,9 +124,9 @@ async def app_args_test(interaction: discord.Interaction, arg1: str, arg2: int, 
 
 이렇게 입력하고 봇을 실행하면 아래와 같은 결과를 볼 수 있습니다.
 
-![명령어 목록 사진](/assets/img/Discord-py_Bot/2023-03-16-discord-py_bot_4/3.1.png)
-![매개변수 명령어 입력 사진](/assets/img/Discord-py_Bot/2023-03-16-discord-py_bot_4/3.2.png)
-![매개변수 명령어 결과 사진](/assets/img/Discord-py_Bot/2023-03-16-discord-py_bot_4/3.3.png)
+![명령어 목록 사진](/assets/images/Discord-py_Bot/2023-03-16-discord-py_bot_4/3.1.png)
+![매개변수 명령어 입력 사진](/assets/images/Discord-py_Bot/2023-03-16-discord-py_bot_4/3.2.png)
+![매개변수 명령어 결과 사진](/assets/images/Discord-py_Bot/2023-03-16-discord-py_bot_4/3.3.png)
 
 ## 4. 명령어 예외처리 하기
 
@@ -146,7 +146,7 @@ async def app_exception_error(interaction: discord.Interaction, error):
     await interaction.response.send_message(f"에러가 발생하였습니다.\n```{error}```")
 ```
 
-![예외 발생 결과 사진](/assets/img/Discord-py_Bot/2023-03-16-discord-py_bot_4/4.1.png)
+![예외 발생 결과 사진](/assets/images/Discord-py_Bot/2023-03-16-discord-py_bot_4/4.1.png)
 
 <br>
 

@@ -19,7 +19,7 @@ date: 2023-03-02
 명령 프롬프트에 `pip` 를 입력하면 아래 사진과 같이 `'pip'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
 배치 파일이 아닙니다.` 라고 뜹니다.
 
-![cmd pip 없음 사진](/assets/img/Python/2023-03-02-python_pip_install/1.1.png)
+![cmd pip 없음 사진](/assets/images/Python/2023-03-02-python_pip_install/1.1.png)
 
 <br>
 
@@ -40,33 +40,33 @@ date: 2023-03-02
 
 윈도우 검색창에 **python** 을 적고 **python 3.x** 밑에 `파일 위치 열기` 버튼을 클릭합니다.
 
-![python 검색사진](/assets/img/Python/2023-03-02-python_pip_install/2.1.1.png)
+![python 검색사진](/assets/images/Python/2023-03-02-python_pip_install/2.1.1.png)
 
 그러면 다음과 같은 창이 뜨는데,
 
-![python 바로가기 폴더 사진](/assets/img/Python/2023-03-02-python_pip_install/2.1.2.png)
+![python 바로가기 폴더 사진](/assets/images/Python/2023-03-02-python_pip_install/2.1.2.png)
 
 여기서 한번 더 `파일 위치 열기` 를 클릭합니다.
 
-![python이 있는 폴더 사진](/assets/img/Python/2023-03-02-python_pip_install/2.1.3.png)
+![python이 있는 폴더 사진](/assets/images/Python/2023-03-02-python_pip_install/2.1.3.png)
 
 위와 같은 창이 나오면, 폴더의 경로를 복사합니다.
 
 다시 윈도우 검색창으로 가서 **path** 를 적고 **시스템 환경 번수 편집** 을 클릭합니다.
 
-![path 검색 사진](/assets/img/Python/2023-03-02-python_pip_install/2.1.4.png)
+![path 검색 사진](/assets/images/Python/2023-03-02-python_pip_install/2.1.4.png)
 
 그러면 아래와 같은 창이 뜨는데,
 
-![시스템 속성 창 사진](/assets/img/Python/2023-03-02-python_pip_install/2.1.5.png)
+![시스템 속성 창 사진](/assets/images/Python/2023-03-02-python_pip_install/2.1.5.png)
 
 여기서 우측 하단에 있는 `환경 변수` 를 누르고,
 
-![환경 변수창 사진](/assets/img/Python/2023-03-02-python_pip_install/2.1.6.png)
+![환경 변수창 사진](/assets/images/Python/2023-03-02-python_pip_install/2.1.6.png)
 
 하단에 **시스템 변수** 카테고리에서 변수명이 **Path** 인 값을 찾아 `편집` 을 클릭합니다.
 
-![환경 변수 편집창 사진](/assets/img/Python/2023-03-02-python_pip_install/2.1.7.png)
+![환경 변수 편집창 사진](/assets/images/Python/2023-03-02-python_pip_install/2.1.7.png)
 
 여기서 `새로 만들기` 버튼을 클릭하고, 아까 복사했던 **"python이 설치된 경로"/** 와 **"python이 설치된 경로"/Scripts** 를 붙여넣고 확인을 눌러 설정을 마칩니다.
 
