@@ -29,5 +29,6 @@
   },
   "markdownlint.config": {
     "no-inline-html": false,
+    "ul-style": false
   }
 }
