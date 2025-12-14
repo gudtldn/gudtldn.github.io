@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true
 
 date: 2023-03-02
-last_modified_at: 2023-03-02
+last_modified_at: 2025-12-14
 ---
 
 ## 1. 에러
@@ -21,8 +21,6 @@ last_modified_at: 2023-03-02
 
 ![cmd pip 없음 사진](/assets/images/Python/2023-03-02-python_pip_install/1.1.png)
 
-<br>
-
 ## 2. 원인
 
 여러 가지 원인이 있겠지만 주로 아래 항목과 같은 경우가 많습니다.
@@ -30,13 +28,9 @@ last_modified_at: 2023-03-02
 1. 시스템 환경 변수에 `pip` 의 경로를 추가하지 않음.
 2. `pip install --upgrade` 친 후 `pip` 이 제거됨.
 
-<br>
-
 ## 2.1. 해결방법 #1
 
-1번의 해결방법은
-
-먼저 python의 설치 경로를 알아야 합니다.
+1번의 해결방법은 먼저 python의 설치 경로를 알아야 합니다.
 
 윈도우 검색창에 **python** 을 적고 **python 3.x** 밑에 `파일 위치 열기` 버튼을 클릭합니다.
 
@@ -70,11 +64,9 @@ last_modified_at: 2023-03-02
 
 여기서 `새로 만들기` 버튼을 클릭하고, 아까 복사했던 **"python이 설치된 경로"/** 와 **"python이 설치된 경로"/Scripts** 를 붙여넣고 확인을 눌러 설정을 마칩니다.
 
-<br>
-
 ## 2.2. 해결방법 #2
 
-2번 같은경우에는 **pip** 파일이 없어졌을 가능성이 큽니다.<br>
+2번 같은경우에는 **pip** 파일이 없어졌을 가능성이 큽니다.  
 따라서 아래 명령어를 명령 프롬프트에다가 치면 복구할 수 있습니다.
 
 ```bash
@@ -83,8 +75,6 @@ last_modified_at: 2023-03-02
 ```
 
 위 명령어는 `https://bootstrap.pypa.io/get-pip.py` 에서 python코드를 다운하고, 컴퓨터에 설치된 python으로 실행해서 복구하는 명령어 입니다.
-
-<br>
 
 ---
 
