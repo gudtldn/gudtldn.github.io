@@ -24,3 +24,7 @@ Jekyll의 포스트 파일(`_posts/` 폴더 내의 `.md` 또는 `.markdown` 파�
 | last_modified_at | 마지막 수정일                                    | `last_modified_at: 2025-06-21`              |
 | toc              | 목차 표시 여부 (테마에 따라 다름)                | `toc: true`                                 |
 | toc_sticky       | 목차 고정 여부 (테마에 따라 다름)                | `toc_sticky: true`                          |
+| math             | 수식 렌더링 여부 (MathJax 등 사용 시)            | `math: true`                                |
+| mermaid          | Mermaid 다이어그램 렌더링 여부                   | `mermaid: true`                             |
+
+[예시](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_posts/2019-08-08-text-and-typography.md?plain=1)
