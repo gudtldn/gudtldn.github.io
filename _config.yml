@@ -25,7 +25,7 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://gudtldn.github.io"
+url: "https://blog.gudtldn.dev"
 
 github:
   username: gudtldn
@@ -37,7 +37,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: hyongsiwoo
-  email: gudtldn1234@gmail.com
+  email: me@gudtldn.dev
   links:
     # The first element serves as the copyright owner's link
     # - https://twitter.com/username
