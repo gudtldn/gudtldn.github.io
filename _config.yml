@@ -208,8 +208,6 @@ compress_html:
     envs: [development]
 
 include:
-  - "navereeaed9adc3f2b2a188e61b19a2b23e77.html"
-
 exclude:
   - "*.gem"
   - "*.gemspec"
