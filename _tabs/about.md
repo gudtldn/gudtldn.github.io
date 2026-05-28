@@ -10,7 +10,7 @@ order: 4
 
 ## 💬 궁금한 점이 있으신가요?
 
-- **[여기](https://github.com/gudtldn/gudtldn/issues)**에서 언제든지 질문해 주세요!
+- **[여기](https://github.com/gudtldn/gudtldn/discussions)**에서 언제든지 질문해 주세요!
 
 ## 📫 또는 아래 연락처로 연락해 주세요!
 
