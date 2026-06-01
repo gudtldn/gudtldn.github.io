@@ -2,6 +2,7 @@
   "recommendations": [
     "ms-vscode-remote.remote-containers",
     "DavidAnson.vscode-markdownlint",
-    "shd101wyy.markdown-preview-enhanced"
+    "shd101wyy.markdown-preview-enhanced",
+    "jjk.jjk"
   ]
 }

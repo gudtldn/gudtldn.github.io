@@ -1,4 +1,6 @@
 {
+  // Disable Git
+  "git.enabled": false,
   // Prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
